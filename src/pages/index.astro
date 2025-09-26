@@ -6,27 +6,15 @@ import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import { Button, Card, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import ProjectCard from '@/components/home/ProjectCard.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
-const webDevelopment = [
-  'Vue.js',
-  'Nuxt.js',
-  'Node.js',
-  'React.js',
-  'TypeScript',
-  'JavaScript',
-  'CSS',
-  'HTML'
-]
 const languages = ['English CET-6', 'Japanese JLPT N2']
 
 const generalProgramming = ['Python', 'PyTorch', 'C', 'C++', 'MATLAB']
 const developmentTools = ['VSCode', 'Vim', 'Git', 'Linux', 'Docker']
-const designTools = ['Figma', 'Photoshop', 'Illustrator']
 const others = ['Markdown', 'LaTeX']
 
 const MAX_POSTS = 10
@@ -146,6 +134,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <!-- <SkillLayout title='Design' skills={designTools} /> -->
         <SkillLayout title='Other' skills={others} />
       </Section>
+
+      
     </div>
     <!-- <Quote class='mt-12' /> -->
   </main>
