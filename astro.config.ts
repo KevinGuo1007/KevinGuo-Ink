@@ -110,6 +110,12 @@ export default defineConfig({
       //     emitFile: true,
       //     filename: 'stats.html'
       //   })
-    ]
+    ],
+    build: {
+      assetsInlineLimit: 0
+    },
+    optimizeDeps: {
+      include: ['@/assets/tools/*.svg']
+    }
   }
 })
