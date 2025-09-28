@@ -16,7 +16,28 @@ const { class: className } = Astro.props
   </div>
 </quote-component>
 
+
 <script>
+  class Quote extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    render() {
+      const quoteEl = this.querySelector('#quote-sentence') as HTMLElement
+      if (!quoteEl) return
+      // 直接写死固定内容
+      quoteEl.innerText = "You'll end up destitute because you're in some stupid rebellious phase."
+    }
+
+    connectedCallback() {
+      // 组件加载后直接渲染固定文本
+      this.render()
+    }
+  }
+  customElements.define('quote-component', Quote)
+</script>
+<!-- <script>
   import config from 'virtual:config'
 
   const { quote } = config.integ
@@ -41,4 +62,4 @@ const { class: className } = Astro.props
     }
   }
   customElements.define('quote-component', Quote)
-</script>
+</script> -->

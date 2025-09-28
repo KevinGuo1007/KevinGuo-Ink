@@ -3,7 +3,7 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: "KevinGuo' ink ",
+  title: "KevinGuo ink ",
   /** Will be used in index page & copyright declaration */
   author: 'KevinGuo',
   /** Description metadata for your website. Can be used in page metadata. */
@@ -127,11 +127,11 @@ export const integ: IntegrationUserConfig = {
   // See: https://astro-pure.js.org/docs/integrations/advanced#web-content-render
   quote: {
     // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
-    server: 'https://v1.hitokoto.cn/?c=i',
-    target: `(data) => data.hitokoto || 'Error'`
+    // server: 'https://v1.hitokoto.cn/?c=i',
+    // target: `(data) => data.hitokoto || 'Error'`
     // https://github.com/lukePeavey/quotable
-    // server: 'https://api.quotable.io/quotes/random?maxLength=60',
-    // target: `(data) => data[0].content || 'Error'`
+    server: 'https://api.quotable.io/quotes/random?maxLength=60',
+    target: `(data) => data[0].content || 'Error'`
   },
   // UnoCSS typography
   // See: https://unocss.dev/presets/typography
