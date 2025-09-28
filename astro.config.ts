@@ -4,7 +4,6 @@ import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
 import rehypeKatex from 'rehype-katex'
 import { remarkAlert } from 'remark-github-blockquote-alert'
-import 'remark-github-blockquote-alert/alert.css';
 import remarkMath from 'remark-math'
 
 // Others
