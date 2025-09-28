@@ -35,12 +35,13 @@ const typographyConfig = {
     blockquote: {
       position: 'relative',
       overflow: 'hidden',
+      'font-style': 'normal',
       'border-width': '1px',
       'border-left': 'inherit',
       'border-radius': 'var(--radius)',
       'padding-inline': '1.6rem',
       'box-shadow': '0 5px 0 ' + bgMuted,
-      color: 'hsl(var(--foreground))',
+      color: fgMuted, 
       ...(typographyCustom.blockquoteStyle === 'normal' && { 'font-style': 'normal' })
     },
     'blockquote::after': {
@@ -55,6 +56,7 @@ const typographyConfig = {
       transform: 'rotate(-15deg)',
       opacity: '0.1'
     },
+    
     // Table
     table: {
       display: 'block',
@@ -234,6 +236,6 @@ export default defineConfig({
     // Typography
     'text-base',
     'prose',
-    'm-2'
+    'm-2',
   ]
 })
