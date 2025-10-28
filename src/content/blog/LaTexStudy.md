@@ -8,6 +8,8 @@ language: 'Chinese'
 comment: false
 ---
 
+> [!NOTE]
+>
 > Typography exists to honor content. —R. Bringhurst  
 > 内容永远比格式重要！——罗伯特·布林赫斯特
 
