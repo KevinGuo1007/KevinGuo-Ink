@@ -1,5 +1,5 @@
 ---
-title: '在 Linux 中将 Windows 下的磁盘分区挂载为第二块硬盘'
+title: '在双系统中将 Windows 下的磁盘分区挂载为 Linux 系统的硬盘'
 description: '捣鼓 Arch Linux'
 publishDate: '2025-10-28 10:44:00'
 tags: ['arch linux', 'configuration', 'linux']
@@ -10,7 +10,7 @@ comment: false
 
 > [!NOTE]
 >
-> 最近配置好了自己的 Arch Linux，系统盘当时只分配了128G，后面由于要跑机器学习的代码和数据集，于是想要将自己另外一块固态硬盘的一部分挂载到 Linux 系统下进行使用。
+> 最近在我的笔记本上配置好了自己的 Arch Linux 和 Windows 的双系统，但是 Linux 的系统盘当时只分配了128G，后面由于要跑机器学习的代码和数据集，于是想要将自己另外一块之前在 Windows 上使用的固态硬盘的一部分挂载到 Linux 系统下进行使用。
 
 
 
