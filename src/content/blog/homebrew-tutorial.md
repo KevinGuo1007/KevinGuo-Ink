@@ -1,7 +1,7 @@
 ---
 title: '教程｜macOS 下超好用的包管理工具 homebrew'
 description: '一篇LaTex的vscode环境配置指南'
-publishDate: '2024-10-18 14:27:00'
+publishDate: '2025-10-18 14:27:00'
 tags: ['macos', 'tutorial', 'tool']
 draft: false
 language: 'Chinese'
