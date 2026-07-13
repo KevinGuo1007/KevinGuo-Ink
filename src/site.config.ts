@@ -97,6 +97,7 @@ export const theme: ThemeUserConfig = {
     /** Blog page size for pagination (optional) */
     blogPageSize: 8,
     // Currently support weibo, x, bluesky
+    share: []
     // share: ['weibo', 'x', 'bluesky']
   }
 }
@@ -153,7 +154,7 @@ export const integ: IntegrationUserConfig = {
   },
   // Comment system
   waline: {
-    enable: true,
+    enable: false,
     // Server service link
     server: 'https://astro-theme-pure-waline.arthals.ink/',
     // Refer https://waline.js.org/en/guide/features/emoji.html
@@ -162,7 +163,7 @@ export const integ: IntegrationUserConfig = {
     additionalConfigs: {
       // search: false,
       pageview: true,
-      comment: true,
+      comment: false,
       locale: {
         reaction0: 'Like',
         placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
