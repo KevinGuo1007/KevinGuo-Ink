@@ -8,7 +8,8 @@ import 'katex/dist/katex.min.css'
 import { MediumZoom } from 'astro-pure/advanced'
 import { ArticleBottom, Copyright, Hero, TOC } from 'astro-pure/components/pages'
 import PageLayout from '@/layouts/ContentLayout.astro'
-import { Comment, PageInfo } from '@/components/waline'
+import Comment from '@/components/waline/Comment.astro'
+import PageInfo from '@/components/waline/PageInfo.astro'
 import { integ } from '@/site-config'
 
 interface Props {
@@ -32,7 +33,7 @@ const {
   title,
   updatedDate,
   draft: isDraft,
-  comment: enableComment
+  comment: postEnableComment
 } = data
 
 const socialImage = heroImage
@@ -42,6 +43,7 @@ const socialImage = heroImage
   : '/images/social-card.png'
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
 const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-text-opacity))'
+const enableComment = integ.waline.enable && postEnableComment
 ---
 
 <PageLayout
