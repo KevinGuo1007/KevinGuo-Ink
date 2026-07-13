@@ -55,6 +55,7 @@ span.katex-display {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
+  color: hsl(var(--foreground) / var(--un-text-opacity, 1));
   background-color: hsl(var(--muted) / var(--un-bg-opacity, 1)) !important;
 
   /* Code container */
@@ -64,10 +65,12 @@ span.katex-display {
     padding-bottom: 0.85rem;
     padding-inline: 0;
     background: none;
+    color: inherit;
     overflow-x: scroll;
 
     & code {
       display: block;
+      color: inherit;
       width: fit-content;
       min-width: 100%;
       min-height: 1.5rem;

@@ -7,11 +7,12 @@ const typographyCustom = integ.typography || {}
 const fg = 'hsl(var(--foreground) / var(--un-text-opacity, 1))'
 const fgMuted = 'hsl(var(--muted-foreground) / var(--un-text-opacity, 1))'
 const bgMuted = 'hsl(var(--muted) / var(--un-bg-opacity, 1))'
+const codeFg = 'hsl(var(--foreground) / var(--un-text-opacity, 1))'
 
 const typographyConfig = {
   cssExtend: {
     // Title
-    'h2,h3,h4,h5,h6': {
+    'h1,h2,h3,h4,h5,h6': {
       'scroll-margin-top': '3rem',
       'font-weight': '500',
       color: fg
@@ -98,6 +99,7 @@ const typographyConfig = {
     // Inline code
     ...(typographyCustom.inlineCodeBlockStyle === 'modern' && {
       ':not(pre) > code': {
+        color: codeFg,
         padding: '0.3em 0.5em',
         border: '1px solid hsl(var(--border) / 1)',
         'border-radius': 'var(--radius)',
@@ -133,6 +135,7 @@ const typographyConfig = {
       color: fg
     },
     'code:not(pre code)': {
+      color: codeFg,
       'white-space': 'pre-wrap!important',
       'word-break': 'break-all!important'
     },
