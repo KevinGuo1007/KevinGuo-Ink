@@ -11,12 +11,6 @@ import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
-const languages = ['English CET-6', 'Japanese JLPT N2']
-
-const generalProgramming = ['Python', 'PyTorch', 'C', 'C++', 'MATLAB']
-const developmentTools = ['VSCode', 'Vim', 'Git', 'Linux', 'Docker']
-const others = ['Markdown', 'LaTeX']
-
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
@@ -111,7 +105,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       />
     </Section> */
       }
-      <Section title='Education'>
+      
+      <!-- <Section title='Education'>
         <Card
           as='a'
           heading='广东第二师范学院'
@@ -124,19 +119,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
             src='/images/GDUE.svg'
           />
         </Card>
-      </Section>
-
-      <Section title='Skills'>
-        <SkillLayout title='Languages' skills={languages} />
-        <!-- <SkillLayout title='Web' skills={webDevelopment} /> -->
-        <SkillLayout title='Programming' skills={generalProgramming} />
-        <SkillLayout title='Tools' skills={developmentTools} />
-        <!-- <SkillLayout title='Design' skills={designTools} /> -->
-        <SkillLayout title='Other' skills={others} />
-      </Section>
-
+      </Section> -->
       
     </div>
-    <Quote class='mt-12' />
   </main>
 </PageLayout>
